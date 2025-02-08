@@ -8,3 +8,8 @@
 - 希望能在下学期结束前完成CS61B的学习
 
 ## 当前进度：
+- **2025年2月8日** 完成lab1
+
+## 资源：
+- [课程主页](https://sp21.datastructur.es/)
+- [自动评测](https://www.gradescope.com/)
