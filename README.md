@@ -14,3 +14,6 @@
 ## 资源：
 - [课程主页](https://sp21.datastructur.es/)
 - [自动评测](https://www.gradescope.com/)
+
+## PS：
+- 仓库布局不能改变，否则自动评测会找不到文件
