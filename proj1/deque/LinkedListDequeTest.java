@@ -147,4 +147,22 @@ public class LinkedListDequeTest {
             i++;
         }
     }
+
+    @Test
+    public void removeADDTest() {
+        System.out.println("Make sure to uncomment the lines below (and delete this print statement).");
+
+        LinkedListDeque<Integer> lld = new LinkedListDeque<>();
+
+        for (int i = 0; i < 100; i++) {
+            lld.addFirst(i);
+            lld.addLast(i);
+        }
+
+        for(int i = 0; i < 100; i++) {
+            int a = lld.removeFirst();
+            int b = lld.removeLast();
+            assertEquals("Should have the same value", a, b);
+        }
+    }
 }

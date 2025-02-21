@@ -85,7 +85,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
             return null;
         }
 
-        Item removeItem = get(size() - 1);
+        Item removeItem = head.prev.item;
         head.prev.prev.next = head;
         head.prev = head.prev.prev;
         size--;
