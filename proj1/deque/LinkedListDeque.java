@@ -2,7 +2,7 @@ package deque;
 
 import java.util.Iterator;
 
-public class LinkedListDeque<Item> implements Iterable<Item> {
+public class LinkedListDeque<Item> implements Iterable<Item>, Deque<Item> {
     private Node<Item> head;
     private int size;
 
@@ -26,6 +26,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         size = 0;
     }
 
+    @Override
     /**  Adds an item of type Item to the front of the deque. */
     public void addFirst(Item item) {
         Node<Item> newNode = new Node<>(item, head, head.next);
@@ -34,6 +35,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         size++;
     }
 
+    @Override
     /** Adds an item of type Item to the back of the deque.  */
     public void addLast(Item item) {
         Node<Item> newNode = new Node<>(item, head.prev, head);
@@ -42,16 +44,19 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         size++;
     }
 
+    @Override
     /** Returns true if deque is empty, false otherwise. */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    @Override
     /** Returns the number of items in the deque. */
     public int size() {
         return size;
     }
 
+    @Override
     /** Prints the items in the deque from first to last, separated by a space.
        Once all the items have been printed, print out a new line. */
     public void printDeque() {
@@ -63,6 +68,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         System.out.println();
     }
 
+    @Override
     /** Removes and returns the item at the front of the deque.
      * If no such item exists, returns null. */
     public Item removeFirst() {
@@ -78,6 +84,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         return removeItem;
     }
 
+    @Override
     /** Removes and returns the item at the back of the deque.
      * If no such item exists, returns null. */
     public Item removeLast() {
@@ -93,6 +100,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         return removeItem;
     }
 
+    @Override
     /** Gets the item at the given index, where 0 is the front, 1 is the next item, and so forth.
      * If no such item exists, returns null.  */
     public Item get(int index) {
@@ -144,6 +152,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
         }
     }
 
+    @Override
     public Iterator<Item> iterator() {
         return new LinkedListDequeIterator();
     }
