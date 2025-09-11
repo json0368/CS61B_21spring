@@ -3,14 +3,25 @@
  */
 public class Collatz {
 
-    /** Buggy implementation of nextNumber! */
+    /** Lab01: Buggy implementation of nextNumber! */
+//    public static int nextNumber(int n) {
+//        if(n == 1){
+//            return 1;
+//        }else if(n % 2 == 1){
+//            return n * 3 + 1;
+//        }else{
+//            return n / 2;
+//        }
+//    }
+
+    /** Lab04 */
     public static int nextNumber(int n) {
-        if(n == 1){
+        if (n  == 128) {
             return 1;
-        }else if(n % 2 == 1){
-            return n * 3 + 1;
-        }else{
-            return n / 2;
+        } else if (n == 5) {
+            return 3 * n + 1;
+        } else {
+            return n * 2;
         }
     }
 

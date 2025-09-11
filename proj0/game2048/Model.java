@@ -231,7 +231,7 @@ public class Model extends Observable {
                     int ni = i + direction[k][0];
                     int nj = j + direction[k][1];
                     if (ni >= 0 && ni < size && nj >= 0 && nj < size) {
-                        if(b.tile(ni, nj) == null || b.tile(ni, nj).value() == value){
+                        if (b.tile(ni, nj) == null || b.tile(ni, nj).value() == value) {
                             return true;
                         }
                     }
